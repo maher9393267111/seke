@@ -8,6 +8,7 @@ const option = {
   //"sql11.freesqldatabase.com",
   dialect: "mysql",
   port: 10016,
+  dialectModule: mysql2
 //   pool: {
 //     max: 30,
 //     min: 0,

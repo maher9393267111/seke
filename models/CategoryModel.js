@@ -21,4 +21,24 @@ const Category = sequelize.define('category', {
   timestamps: false
 });
 
+
+
+    // Category.associate = function(models) {
+    //     Category.hasMany(models.Product, {
+    //         as: "categories",
+    //         foreignKey: "cat_id",
+    //         onDelete: 'CASCADE'
+    //     });
+    //   }
+
+
+
 module.exports = Category;
+
+
+// (async() => {
+//   // any chnage in columns change it
+//   // in datbase  hemen beklemeden 
+//   await sequelize.sync({alter: true });
+// })();
+

@@ -2,8 +2,8 @@ const Category = require('../models/CategoryModel');
 
 class CategoryController {
   async create(req, res) {
-    const { name } = req.body;
-    const category = await Category.create({ name });
+    const { name ,slug } = req.body;
+    const category = await Category.create({ name ,slug });
 
     return res.json(category);
   };

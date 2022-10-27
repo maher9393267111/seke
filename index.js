@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors');
 const PORT = process.env.PORT || 6000;
 const router = require('./routes');
+//const sequelize = require('./db/db-config');
 const connectDB = require('./db/connectDB');
 
 require('dotenv').config();
@@ -36,6 +37,9 @@ app.get('*', (req, res) => {
 const start = async () => {
   try {
     await connectDB();
+console.log('sequlize Start in server')
+  //  await sequelize.authenticate({force:true})
+  //  await sequelize.sync()
 
     app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
   } catch (e) {
